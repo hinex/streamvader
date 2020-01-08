@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "StreamVader",
+  "description": "Extension for send notification when streamer online! For twitch, mixer, GoodGame and WASD platforms",
+  "version": "1.0",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    },
+    "default_popup": "index.html",
+    "default_title": "StreamVader"
+  },
+  "permissions": [
+    "https://api.twitch.tv/",
+    "https://twitch.com/",
+    "https://mixer.com/",
+    "https://goodgame.ru/",
+    "https://wasd.tv/",
+    "notifications",
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [ "background.js" ]
+  },
+  "homepage_url": "https://hardskilled.com/steamvader",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "options_page": "index.html/#/options"
+}
