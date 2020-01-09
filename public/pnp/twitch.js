@@ -24,13 +24,13 @@ const checkUrl = (url) => {
     return false
 }
 
-const init = (url) => {
-    if (checkUrl(url)) return
+const init = (url, iterator = 0) => {
+    if (checkUrl(url) || iterator === 4) return
 
     wait = true
     const element = document.querySelector('.player-controls__right-control-group')
 
-    if (!element) return setTimeout(init.bind(null, url), 200)
+    if (!element) return setTimeout(init.bind(null, iterator + 1), 200 + 100 * iterator)
 
     wait = false
 
@@ -78,7 +78,6 @@ const init = (url) => {
 
     div.appendChild(button)
     element.prepend(div)
-    console.log(element, div)
 }
 
 let url = window.location.pathname
