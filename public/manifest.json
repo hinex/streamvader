@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "StreamVader",
-  "description": "Extension for send notification when streamer online! For twitch, mixer, GoodGame and WASD platforms",
+  "description": "Extension for send notification when streamer online! For Twitch, Mixer, GoodGame and WASD platforms",
   "version": "1.0",
   "icons": {
     "16": "icons/16.png",
@@ -18,21 +18,32 @@
     "default_popup": "index.html",
     "default_title": "StreamVader"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["pnp/youtube.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["pnp/twitch.js"],
+      "run_at": "document_end"
+    }
+  ],
   "permissions": [
     "https://api.twitch.tv/",
-    "https://twitch.com/",
+    "https://www.twitch.com/",
     "https://mixer.com/",
     "https://goodgame.ru/",
     "https://wasd.tv/",
+    "https://www.youtube.com/",
     "notifications",
-    "contextMenus",
     "activeTab"
   ],
   "background": {
-    "persistent": true,
-    "scripts": [ "background.js" ]
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "homepage_url": "https://hardskilled.com/steamvader",
-  "update_url": "https://clients2.google.com/service/update2/crx",
-  "options_page": "index.html/#/options"
+  "update_url": "https://clients2.google.com/service/update2/crx"
 }

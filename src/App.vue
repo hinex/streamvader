@@ -9,53 +9,34 @@ export default {
 </script>
 
 <style>
+  a:hover {
+    text-decoration: none!important;
+  }
+
+  .tabs ul li {
+    flex: 1
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  a, a:hover, a:focus {
+    outline: none;
+  }
+
+  .dropdown-item {
+    display: inline-flex!important;
+    align-items: center;
+  }
+
+  .dropdown .background {
+    background-color: rgba(25, 25, 25, 0.7);
+  }
+
   @import "assets/fonts/materialdesignicons.css";
-  @charset "UTF-8";
 
-  @font-face {
-    font-family: "streamvader";
-    src:url("fonts/streamvader.eot");
-    src:url("fonts/streamvader.eot?#iefix") format("embedded-opentype"),
-    url("fonts/streamvader.woff") format("woff"),
-    url("fonts/streamvader.ttf") format("truetype"),
-    url("fonts/streamvader.svg#streamvader") format("svg");
-    font-weight: normal;
-    font-style: normal;
-
-  }
-
-  [data-icon]:before {
-    font-family: "streamvader" !important;
-    content: attr(data-icon);
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  [class^="icon-"]:before,
-  [class*=" icon-"]:before {
-    font-family: "streamvader" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .icon-wasd:before {
-    content: "\61";
-  }
-  .icon-goodgame:before {
-    content: "\62";
-  }
 
   /* roboto-100 - cyrillic_latin */
   @font-face {
