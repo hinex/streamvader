@@ -28,6 +28,16 @@
       "matches": ["https://www.twitch.tv/*"],
       "js": ["pnp/twitch.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["https://goodgame.ru/*"],
+      "js": ["pnp/goodgame.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://mixer.com/*"],
+      "js": ["pnp/mixer.js"],
+      "run_at": "document_end"
     }
   ],
   "permissions": [
