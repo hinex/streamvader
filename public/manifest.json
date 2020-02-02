@@ -33,17 +33,11 @@
       "matches": ["https://goodgame.ru/*"],
       "js": ["pnp/goodgame.js"],
       "run_at": "document_end"
-    },
-    {
-      "matches": ["https://mixer.com/*"],
-      "js": ["pnp/mixer.js"],
-      "run_at": "document_end"
     }
   ],
   "permissions": [
     "https://api.twitch.tv/",
     "https://www.twitch.com/",
-    "https://mixer.com/",
     "https://goodgame.ru/",
     "https://wasd.tv/",
     "https://www.youtube.com/",

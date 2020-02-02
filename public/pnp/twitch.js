@@ -30,7 +30,7 @@ const init = (url, iterator = 0) => {
     wait = true
     const element = document.querySelector('.player-controls__right-control-group')
 
-    if (!element) return setTimeout(init.bind(null, url, iterator + 1), 200 + 100 * iterator)
+    if (!element) return setTimeout(init.bind(null, url, iterator + 1), 200 + 150 * iterator)
 
     wait = false
 
@@ -89,4 +89,4 @@ setInterval(() => {
     init(url)
 }, 200)
 
-document.addEventListener("DOMContentLoaded", init.bind(url));
+init(url)
